@@ -149,7 +149,7 @@ contract RandomSVG is ERC721URIStorage, VRFConsumerBase {
 
         string memory color = colors[_randomNumber % colors.length];
 
-        pathSvg = string(abi.encodePacked(pathSvg, "' fill='transparent' stroke='", color, "'>"));
+        pathSvg = string(abi.encodePacked(pathSvg, "' fill='transparent' stroke='", color, "'/>"));
     }
 
     function generatePathCommand(uint256 _randomNumber) public view returns(string memory pathCommand) {
@@ -161,9 +161,10 @@ contract RandomSVG is ERC721URIStorage, VRFConsumerBase {
 
         uint256 parameterTwo = uint256(keccak256(abi.encode(_randomNumber, size * 3))) % size;
 
-        pathCommand = string(abi.encodePacked(pathCommand, " ", uint2str(parameterOne), uint2str(parameterTwo)));
+        pathCommand = string(abi.encodePacked(pathCommand, " ", uint2str(parameterOne), " ", uint2str(parameterTwo)));
     }
 
+    // From: https://stackoverflow.com/a/65707309/11969592
     function uint2str(uint _i) internal pure returns (string memory _uintAsString) {
         if (_i == 0) {
             return "0";
