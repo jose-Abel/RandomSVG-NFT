@@ -21,7 +21,9 @@ Smart contract project built in the Rinkeby Test Network for Ethereum. The contr
 
 To download the project either can do it with with git clone command:
 
-git clone 
+```
+    git clone https://github.com/jose-Abel/RandomSVG-NFT.git
+```
 
 Install the yarn and npm packages with:
 
