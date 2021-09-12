@@ -53,7 +53,7 @@ Create a .env file in the root of the project and save the following environment
     ETHERSCAN_API_KEY=<Your Etherscan API Key>
 ```
 
-The project has 3 deploys scripts, 00_deploy_mocs.js and 01_deploy_svgnft.js were to deploy locally for testing purposes.
+The project has 3 deploys scripts, 00_deploy_mocks.js and 01_deploy_svgnft.js were to deploy locally for testing purposes.
 
 To deploy the RandomSVG contract, Create and NFT from it and Finish the minting of the NFT by generating a random SVG, on the rinkeby network, run the 02_deploy_randomSVG.js script with the following command:
 
@@ -74,7 +74,7 @@ To deploy to polygon main network
 
 https://rinkeby.etherscan.io/address/0x6b92cad76e5ec0d3b43e5b287248b6cd98a00cd5
 
-- NFT on OpenSea
+- NFT on Testnet OpenSea
 
 https://testnets.opensea.io/assets/0x6b92cad76e5ec0d3b43e5b287248b6cd98a00cd5/0
 
