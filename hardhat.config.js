@@ -37,6 +37,13 @@ module.exports = {
         mnemonic: MNEMONIC
       },
       saveDeployments: true
+    },
+    polygon: {
+      url: "https://rpc-mainnet.maticvigil.com",
+      accounts: {
+        mnemonic: MNEMONIC
+      },
+      saveDeployments: true
     }
   },
   etherscan: {

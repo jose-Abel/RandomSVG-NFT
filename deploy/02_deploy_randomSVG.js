@@ -69,7 +69,7 @@ module.exports = async({
 
     const randomSVG = new ethers.Contract(RandomSVG.address, RandomSVGContract.interface, signer);
 
-    let creation_tx = await randomSVG.create({gasLimit: 300000 });
+    let creation_tx = await randomSVG.create({gasLimit: 300000, value: '100000000000000000' });
 
     let receipt = await creation_tx.wait(1);
 
@@ -84,7 +84,7 @@ module.exports = async({
 
         log(`Now let's finish the mint...`);
 
-        let finish_tx = await randomSVG.finishMint(tokenId, {gasLimit: 2000000});
+        let finish_tx = await randomSVG.finishMint(tokenId, {gasLimit: 2000000, gasPrice: 20000000000});
 
         await finish_tx.wait(1);
 
